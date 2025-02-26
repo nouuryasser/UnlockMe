@@ -1,0 +1,18 @@
+<?php
+// Define the password
+$password = “7190590”; // Replace "yourPassword" with your actual password
+
+// Check if the password is correct
+if ($_POST['password'] != $password) {
+    // If the password is wrong, show the password form
+    echo '<form method="post">
+            <label for="password">Enter Password: </label>
+            <input type="password" name="password" required>
+            <input type="submit" value="Submit">
+          </form>';
+    exit;
+}
+
+// If the password is correct, show the secret message
+echo "Welcome! Here's your secret message: <strong>Welcome to the secret page!</strong>";
+?>
